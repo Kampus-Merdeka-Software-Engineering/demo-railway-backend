@@ -8,7 +8,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/json', (req, res) => {
-    res.json({name : 'nipe'});
+    let name = req.query.name || '';
+    res.json({name : name});
 });
 
 app.listen(port, () => {
